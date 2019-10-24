@@ -1,16 +1,16 @@
-### Create EB and ElastiGroup via terraform
+# Create EB and ElastiGroup via terraform
 
-# Assumptions
+### Assumptions
 - EB application from `var.application` exists
 - vpc with subnets exists
 - roles (iam image profile, service role) are created
 
-# Requirements
+### Requirements
 1) LoadBalancerType = application			in EB env
 2) health_check_type = "TARGET_GROUP" 		in ElastiGroup
 3) VPC
 
-# Flow to create/destroy EB+ElastiGroup:
+### Flow to create/destroy EB+ElastiGroup:
 1) `cd tf`
 2) `terraform init`
 3) `terraform apply`
